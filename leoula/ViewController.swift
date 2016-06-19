@@ -39,18 +39,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         displayCurrentWord()
-
-        leButton.backgroundColor = UIColor.clearColor()
-        leButton.layer.cornerRadius = 5
-        leButton.titleEdgeInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-        leButton.layer.borderWidth = 1
-        leButton.layer.borderColor = UIColor.blackColor().CGColor
-
-        laButton.backgroundColor = UIColor.clearColor()
-        laButton.layer.cornerRadius = 5
-        laButton.titleEdgeInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-        laButton.layer.borderWidth = 1
-        laButton.layer.borderColor = UIColor.blackColor().CGColor
+        styleButton(leButton)
+        styleButton(laButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,5 +75,14 @@ class ViewController: UIViewController {
         } else {
             flash.flashRed()
         }
+    }
+    
+    func styleButton(button : UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.cornerRadius = 5
+        button.titleEdgeInsets = UIEdgeInsets(top: 20.0, left: 30.0, bottom: 20.0, right: 30.0)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.blackColor().CGColor
+        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
 }

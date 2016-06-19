@@ -19,29 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElA-8M-UD5">
-                                <rect key="frame" x="170" y="468" width="60" height="30"/>
+                                <rect key="frame" x="150" y="448" width="120" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ly9-40-rzN"/>
+                                    <constraint firstAttribute="width" constant="120" id="Ly9-40-rzN"/>
+                                    <constraint firstAttribute="height" constant="50" id="Mez-P5-um9"/>
                                 </constraints>
-                                <state key="normal" title="le"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="la"/>
                                 <connections>
-                                    <action selector="leTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDS-UU-Z15"/>
+                                    <action selector="laTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhO-vt-00j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-xM-vQo">
-                                <rect key="frame" x="90" y="468" width="60" height="30"/>
+                                <rect key="frame" x="50" y="448" width="120" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="1qf-0u-2xg"/>
+                                    <constraint firstAttribute="width" constant="120" id="1qf-0u-2xg"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZQh-ar-ipt"/>
                                 </constraints>
-                                <state key="normal" title="la">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="le">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="laTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="te4-SC-HXQ"/>
+                                    <action selector="leTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mL-4a-FR0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-q2-Y4f">
-                                <rect key="frame" x="20" y="258" width="280" height="51"/>
+                                <rect key="frame" x="20" y="170" width="280" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="c8e-mJ-2j9"/>
                                 </constraints>
@@ -53,18 +57,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8cy-xM-vQo" secondAttribute="bottom" constant="70" id="0fB-iu-mdh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ElA-8M-UD5" secondAttribute="trailing" constant="70" id="4Dh-sI-aWv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ElA-8M-UD5" secondAttribute="trailing" constant="30" id="4Dh-sI-aWv"/>
+                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="8C6-CG-MB0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ElA-8M-UD5" secondAttribute="bottom" constant="70" id="THz-dK-KC9"/>
                             <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUx-Xf-BlH"/>
-                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vh7-lY-M6s"/>
-                            <constraint firstItem="8cy-xM-vQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="iP2-uC-U2G"/>
-                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6o-6j-NFf"/>
+                            <constraint firstItem="8cy-xM-vQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="iP2-uC-U2G"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="flash" destination="8bC-Xf-vdC" id="gsA-op-rfv"/>
-                        <outlet property="laButton" destination="8cy-xM-vQo" id="Ucy-1a-0iX"/>
-                        <outlet property="leButton" destination="ElA-8M-UD5" id="sNA-hG-JIV"/>
+                        <outlet property="laButton" destination="ElA-8M-UD5" id="nCr-Ki-KJW"/>
+                        <outlet property="leButton" destination="8cy-xM-vQo" id="Fap-2q-Ojt"/>
                         <outlet property="wordLabel" destination="Dqk-q2-Y4f" id="ki5-uY-QZ6"/>
                     </connections>
                 </viewController>
