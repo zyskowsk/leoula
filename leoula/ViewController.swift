@@ -10,16 +10,21 @@ import UIKit
 let word = Word()
 
 extension UIView {
-    func fadeIn() {
-        // Move our fade out code from earlier
-        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-            self.alpha = 1.0 // Instead of a specific instance of, say, birdTypeLabel, we simply set [thisInstance] (ie, self)'s alpha
+    func flashRed() {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.backgroundColor = UIColor.redColor()
+            }, completion: nil)
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.backgroundColor = UIColor.whiteColor()
             }, completion: nil)
     }
 
-    func fadeOut() {
-        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.alpha = 0.0
+    func flashGreen() {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.backgroundColor = UIColor.greenColor()
+            }, completion: nil)
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.backgroundColor = UIColor.whiteColor()
             }, completion: nil)
     }
 }
@@ -27,13 +32,25 @@ extension UIView {
 class ViewController: UIViewController {
     @IBOutlet var leButton : UIButton!
     @IBOutlet var laButton : UIButton!
-    @IBOutlet var textView : UITextView!
-    @IBOutlet var flash : UILabel!
+    @IBOutlet var wordLabel : UILabel!
+    @IBOutlet var flash : UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         displayCurrentWord()
+
+        leButton.backgroundColor = UIColor.clearColor()
+        leButton.layer.cornerRadius = 5
+        leButton.titleEdgeInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        leButton.layer.borderWidth = 1
+        leButton.layer.borderColor = UIColor.blackColor().CGColor
+
+        laButton.backgroundColor = UIColor.clearColor()
+        laButton.layer.cornerRadius = 5
+        laButton.titleEdgeInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        laButton.layer.borderWidth = 1
+        laButton.layer.borderColor = UIColor.blackColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,18 +75,15 @@ class ViewController: UIViewController {
     }
 
     func displayCurrentWord() {
-        textView.text = word.currentWord
+        wordLabel.text = word.currentWord
+        wordLabel.textAlignment = .Center
     }
 
     func showFlash(success : Bool) {
         if (success) {
-            flash.textColor = UIColor.greenColor()
-            flash.text = "oui!"
+            flash.flashGreen()
         } else {
-            flash.textColor = UIColor.redColor()
-            flash.text = "non!"
+            flash.flashRed()
         }
-        flash.fadeIn()
-        flash.fadeOut()
     }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,50 +15,62 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElA-8M-UD5">
-                                <rect key="frame" x="231" y="516" width="30" height="30"/>
-                                <state key="normal" title="la"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElA-8M-UD5">
+                                <rect key="frame" x="170" y="468" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Ly9-40-rzN"/>
+                                </constraints>
+                                <state key="normal" title="le"/>
                                 <connections>
-                                    <action selector="laTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8S-7t-0pM"/>
+                                    <action selector="leTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDS-UU-Z15"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-xM-vQo">
-                                <rect key="frame" x="112" y="516" width="30" height="30"/>
-                                <state key="normal" title="le">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-xM-vQo">
+                                <rect key="frame" x="90" y="468" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1qf-0u-2xg"/>
+                                </constraints>
+                                <state key="normal" title="la">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="leTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUS-bs-Sju"/>
+                                    <action selector="laTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="te4-SC-HXQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Word" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qql-45-bFk">
-                                <rect key="frame" x="112" y="158" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oui!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9E-3O-G54">
-                                <rect key="frame" x="181" y="427" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-q2-Y4f">
+                                <rect key="frame" x="20" y="258" width="280" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="c8e-mJ-2j9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8cy-xM-vQo" secondAttribute="bottom" constant="70" id="0fB-iu-mdh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ElA-8M-UD5" secondAttribute="trailing" constant="70" id="4Dh-sI-aWv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ElA-8M-UD5" secondAttribute="bottom" constant="70" id="THz-dK-KC9"/>
+                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUx-Xf-BlH"/>
+                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vh7-lY-M6s"/>
+                            <constraint firstItem="8cy-xM-vQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="iP2-uC-U2G"/>
+                            <constraint firstItem="Dqk-q2-Y4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6o-6j-NFf"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="flash" destination="D9E-3O-G54" id="74W-mF-EPr"/>
+                        <outlet property="flash" destination="8bC-Xf-vdC" id="gsA-op-rfv"/>
                         <outlet property="laButton" destination="8cy-xM-vQo" id="Ucy-1a-0iX"/>
                         <outlet property="leButton" destination="ElA-8M-UD5" id="sNA-hG-JIV"/>
-                        <outlet property="textView" destination="Qql-45-bFk" id="pXz-Cb-77E"/>
+                        <outlet property="wordLabel" destination="Dqk-q2-Y4f" id="ki5-uY-QZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350" y="317"/>
+            <point key="canvasLocation" x="186" y="300"/>
         </scene>
     </scenes>
 </document>
