@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D48F0C691D16D2C90034774E /* word_list_level_6.json in Resources */ = {isa = PBXBuildFile; fileRef = D48F0C681D16D2C90034774E /* word_list_level_6.json */; };
+		D48F0C701D1738FE0034774E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F0C6E1D1738FE0034774E /* SearchViewController.swift */; };
+		D48F0C711D1738FE0034774E /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48F0C6F1D1738FE0034774E /* SearchViewController.xib */; };
+		D48F0C741D173C450034774E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F0C721D173C450034774E /* GameViewController.swift */; };
+		D48F0C751D173C450034774E /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48F0C731D173C450034774E /* GameViewController.xib */; };
 		D4E25A291D15865000E5F97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E25A281D15865000E5F97B /* AppDelegate.swift */; };
 		D4E25A2B1D15865000E5F97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E25A2A1D15865000E5F97B /* ViewController.swift */; };
 		D4E25A2E1D15865000E5F97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E25A2C1D15865000E5F97B /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		D48F0C681D16D2C90034774E /* word_list_level_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = word_list_level_6.json; path = ../../../Desktop/word_list_level_6.json; sourceTree = "<group>"; };
+		D48F0C6E1D1738FE0034774E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D48F0C6F1D1738FE0034774E /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		D48F0C721D173C450034774E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D48F0C731D173C450034774E /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		D4E25A251D15865000E5F97B /* leoula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leoula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E25A281D15865000E5F97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E25A2A1D15865000E5F97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +111,12 @@
 			children = (
 				D4E25A281D15865000E5F97B /* AppDelegate.swift */,
 				D4E25A2A1D15865000E5F97B /* ViewController.swift */,
+				D48F0C6E1D1738FE0034774E /* SearchViewController.swift */,
+				D48F0C6F1D1738FE0034774E /* SearchViewController.xib */,
 				D4E25A561D15920C00E5F97B /* Word.swift */,
 				D4E25A2C1D15865000E5F97B /* Main.storyboard */,
+				D48F0C721D173C450034774E /* GameViewController.swift */,
+				D48F0C731D173C450034774E /* GameViewController.xib */,
 				D4E25A2F1D15865000E5F97B /* Assets.xcassets */,
 				D4E25A311D15865000E5F97B /* LaunchScreen.storyboard */,
 				D4E25A341D15865000E5F97B /* Info.plist */,
@@ -239,7 +251,9 @@
 				D4E25A331D15865000E5F97B /* LaunchScreen.storyboard in Resources */,
 				D48F0C691D16D2C90034774E /* word_list_level_6.json in Resources */,
 				D4E25A301D15865000E5F97B /* Assets.xcassets in Resources */,
+				D48F0C711D1738FE0034774E /* SearchViewController.xib in Resources */,
 				D4E25A2E1D15865000E5F97B /* Main.storyboard in Resources */,
+				D48F0C751D173C450034774E /* GameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +279,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E25A2B1D15865000E5F97B /* ViewController.swift in Sources */,
+				D48F0C741D173C450034774E /* GameViewController.swift in Sources */,
 				D4E25A291D15865000E5F97B /* AppDelegate.swift in Sources */,
+				D48F0C701D1738FE0034774E /* SearchViewController.swift in Sources */,
 				D4E25A571D15920C00E5F97B /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
